@@ -1,0 +1,42 @@
+name: Build & Test
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build-publish:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get Submodules
+        run: git submodule update --init --recursive
+      - name: Compile and run Lab1J1
+        run: ./Tools/windows_x64/kmake.exe --from ./labS1J1 --run
+      - name: Compile and run Lab1J2
+        run: ./Tools/windows_x64/kmake.exe --from ./labS1J2 --run
+      - name: Compile and run Lab2J1
+        run: ./Tools/windows_x64/kmake.exe --from ./labS2J1 --run
+      - name: Compile and run Lab2J2
+        run: ./Tools/windows_x64/kmake.exe --from ./labS2J2 --run
+      - name: Compile and run Lab3J1
+        run: ./Tools/windows_x64/kmake.exe --from ./labS3J1 --run
+      - name: Compile and run Lab3J2
+        run: ./Tools/windows_x64/kmake.exe --from ./labS3J2 --run
+      - name: Compile and run Lab4J1
+        run: ./Tools/windows_x64/kmake.exe --from ./labS4J1 --run
+      - name: Compile and run Lab4J2
+        run: ./Tools/windows_x64/kmake.exe --from ./labS4J2 --run
+      - name: Compile and run LabS8
+        run: ./Tools/windows_x64/kmake.exe --from ./labS8 --run
+      - name: Compile and run Lab9J1
+        run: ./Tools/windows_x64/kmake.exe --from ./labS9J1 --run
+      - name: Compile and run Lab9J2
+        run: ./Tools/windows_x64/kmake.exe --from ./labS9J2 --run
+      - name: Compile and run Lab10J1
+        run: ./Tools/windows_x64/kmake.exe --from ./labS10J1 --run
+      - name: Compile and run Lab10J2
+        run: ./Tools/windows_x64/kmake.exe --from ./labS10J2 --run
+    
