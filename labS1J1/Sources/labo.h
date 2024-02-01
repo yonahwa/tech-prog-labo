@@ -1,5 +1,5 @@
 /*
-* Déclarer une structure de donnée qui va s'appeler String. La structure va avoir une propriété characters et une propriété length.
+* Déclarer une structure de donnée qui va s'appeler String. La structure va avoir une propriété de characters et une propriété length.
 */
 
 
