@@ -1,4 +1,9 @@
+//void insertionSort(int elements[], int n) {
 
-void insertionSort(int elements[], int n);
 
-void quickSort(int* elements, int left, int right);
+//}
+
+//void quickSort(int* elements, int left, int right) {
+
+
+//}
