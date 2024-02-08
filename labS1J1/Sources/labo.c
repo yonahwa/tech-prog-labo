@@ -1,5 +1,6 @@
 #include"labo.h"
 #include <stdbool.h>
+#include <string.h>
 
 
 char* sousTexte(char* texte, int from, int to) {
@@ -16,7 +17,9 @@ char* sousTexte(char* texte, int from, int to) {
 
 void set_String(char* text, String* s) {
 
-	s = text;
+	for (int i = 0; i <= strlen(text); i++) {
+		 s->characters[i] = text[i];
+	}
 
 };
 
@@ -24,13 +27,13 @@ void set_String(char* text, String* s) {
 int String_is_palindrome(String* s) {
 
 	for (int i = 0;i < sizeof(s);i++) {
+
 		if (s->characters[i] == s->characters[sizeof(s) - i]) {
-			printf("1");
+			return 1;
 		}
-		else {
-			printf("0");
-		}
+
 	}
+	return 0;
 };
 
 
@@ -38,7 +41,7 @@ void bubbleSort(int elements[], int n) {
 
 	bool échanger = false;
 
-	for (int i = 0; i <= sizeof(elements) - 1; i++) {
+	for (int i = 0; i <= strlen(elements) - 1; i++) {
 		if (elements[i] > elements[i + 1]) {
 			échanger = true; 
 			elements[i] = elements[i + 1];
