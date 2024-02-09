@@ -41,17 +41,17 @@ void bubbleSort(int elements[], int n) {
 
 	bool échanger = false;
 
-	for (int i = 0; i <= strlen(elements) - 1; i++) {
+	for (int i = 0; i < n - 1; i++) {
 		if (elements[i] > elements[i + 1]) {
 			échanger = true; 
-			elements[i] = elements[i + 1];
-			elements[i + 1] = elements[i];
+			int wtf = elements[i];
+			elements[i] = elements[i + 1]; 
+			elements[i+1] = wtf ;
 		}
 
-		if (i >= sizeof(elements) - 1 && échanger == true) {
+		if (échanger == true) {
 
-			échanger = false;
-			i = -1;
+			bubbleSort(elements, n);
 
 		}
 	}
