@@ -13,6 +13,11 @@ typedef struct person_t {
 	size_t age;
 } Person;
 
+typedef struct Node Node;
+typedef struct Node {
+	void* data;
+	Node* next;
+}Node;
 
 /*
 * Creer un noeud et l'ajouter apres le noeud currNode. Utiliser la fonction allocate pour allouer de la memoire.
