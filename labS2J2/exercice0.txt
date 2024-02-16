@@ -1,3 +1,7 @@
 L13 : O(n)
 L15 : O(n)
-L21 : O(n)
+L21 : O(log n)
+L33 : O(log n)
+L39 : O(log N)
+
+pire cas : O(log n)

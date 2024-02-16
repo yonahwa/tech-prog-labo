@@ -1,0 +1,5 @@
+L10 : O(n)
+L13 : O(n^2)
+L31 : O(n)
+
+Pire cas : O(n^2)
