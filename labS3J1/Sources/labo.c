@@ -27,6 +27,12 @@ void insertHead(Node* head, void* newData){
 		head->data = newData;
 	}
 }
-Node* removeByData(Node* head, void* rmData){}
+
+Node* removeByData(Node* head, void* rmData){
+
+	void* save = 0;
+	Node n = { 0 };
+	
+}
 Node* removeByName(Node* head, char* name){}
 void sort(Node* head){}
