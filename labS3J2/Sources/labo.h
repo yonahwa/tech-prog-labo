@@ -13,6 +13,14 @@ typedef struct person_t {
 } Person;
 
 
+typedef struct Node Node;
+typedef struct Node {
+	void* data;
+	Node* next;
+	Node* prev;
+}Node;
+
+
 /*
 * Creer un noeud et l'ajouter apres le noeud currNode. Considerer la propriete next et prev.
 */

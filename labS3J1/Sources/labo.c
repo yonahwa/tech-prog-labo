@@ -44,15 +44,23 @@ Node* removeByData(Node* head, void* rmData){
 }
 Node* removeByName(Node* head, char* name){
 
+	Node* last = NULL;
 	Node* Temp = head;
-	while (Temp->data != name || Temp != NULL) {
-
-		Temp->next->data = Temp->data;
-		Temp->next; 
+	while (Temp != NULL) {
+		Person* p = (Person*)Temp->data;
+		if (strcmp(p->name, name)) {
+			break;
+		}
+		last = Temp;
+		Temp = Temp->next; 
 	}
-	Temp->data;
+	last = Temp->next;
 
 	memset(Temp, 0, sizeof(Node));
 	
 }
-void sort(Node* head){  }
+void sort(Node* head){ 
+	
+
+
+}
