@@ -14,9 +14,9 @@ typedef struct person_t {
 
 typedef struct stack
 {
-	struct stack* prev;
-	struct stack* next;
-	void* data;
+	void** data;
+	int top;
+	size_t max_size;
 } Stack;
 
 /*
