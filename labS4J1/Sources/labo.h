@@ -12,6 +12,13 @@ typedef struct person_t {
 	size_t age;
 } Person;
 
+typedef struct stack
+{
+	struct stack* prev;
+	struct stack* next;
+	void* data;
+} Stack;
+
 /*
 * Creer la fonction d'initialization. Utiliser la fonction allocate au lieu de malloc.
 */
