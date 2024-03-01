@@ -12,10 +12,6 @@ void push(Queue* q, Node* n) {
 	}
 }
 Node* pop(Queue* q){
-
-	if (q == NULL || q->prev == NULL) {
-		return NULL;
-	}
 	Node* n = q->prev;
 	if (q->prev != NULL) {
 		if (q->prev == q->next) {
@@ -23,7 +19,6 @@ Node* pop(Queue* q){
 		}
 		else {
 			q->prev = q->prev->prev;
-			q->prev->next = NULL;
 		}
 	}
 	return n;
