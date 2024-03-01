@@ -32,7 +32,7 @@ void* pop(Stack* s) {
 void* peek(Stack* s) {
 
 	void* out = pop(s);
-	if (out = NULL) {
+	if (out != NULL) {
 		push(s, out);
 	}
 	return out;
@@ -41,8 +41,41 @@ void* peek(Stack* s) {
 
 void reverseStack(Stack* s) {
 
-	new_stack(s->top)
+	void* temp[1024];
+	int ind = 0;
 
+	while (s->top >= 0) {
+		temp[ind++] = pop(s);
+	}
+	for (int i = ind - 1; i >= 0; i--) {
+		push(s, temp[i]);
+	}
 }
 
-void sortStack(Stack* s) {}
+void sortStack(Stack* s) {
+
+	void* temp[1024];
+	int ind = 0;
+
+	while (s->top >= 0) {
+		temp[ind++] = pop(s);
+	}
+	int i;
+	int x;
+	int testeur;
+
+	for (x = 0; x < sizeof(temp); x++) {
+		for (i = 0; i < sizeof(temp) - 1; i++) {
+			if (temp[i + 1] < temp[i]) {
+				testeur= temp[i + 1];
+				temp[i + 1] = temp[i];
+				temp[i] = testeur;
+			}
+		}
+	}
+	for (int i = ind - 1; i >= 0; i--) {
+		push(s, temp[i]);
+	}
+
+
+}
