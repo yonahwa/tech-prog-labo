@@ -27,6 +27,13 @@ typedef struct Node {
 	size_t count;
 }Queue;
 
+typedef struct TreeNode TreeNode;
+struct TreeNode {
+	void* data;
+	TreeNode* left;
+	TreeNode* right;
+};
+
 void queue_init(Queue* q);
 void queue_push(Queue* q, void* data);
 void* queue_pop(Queue* q);
