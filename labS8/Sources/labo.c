@@ -16,3 +16,26 @@ long long fibonacci(int n) {
 		return tab[n];
 	}
 }
+
+TreeNode* tree_create_node(void* data) {
+	TreeNode* tn = allocate(sizeof(TreeNode));
+
+	tn->data = data;
+	tn->left = NULL;
+	tn->right = NULL;
+	return tn;
+}
+
+void tree_add_node(TreeNode* root, TreeNode* node) {
+	if (root->left == NULL) {
+		root->left = node;
+	}
+	else if (root->right == NULL) {
+		root->right = node;
+	}
+}
+
+int dfs(TreeNode* root, void* key) {
+	stack_init(32);
+
+}
