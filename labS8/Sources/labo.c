@@ -36,6 +36,48 @@ void tree_add_node(TreeNode* root, TreeNode* node) {
 }
 
 int dfs(TreeNode* root, void* key) {
-	stack_init(32);
+	int i = 0;
+	Stack s = stack_init(32);
+	stack_push(&s, root);
 
+	while (s.top != -1) {
+		TreeNode* temp = (TreeNode*)stack_pop(&s);
+		i++;
+
+		if (temp->data == key) {
+			return i;
+		}
+		if (temp->right != NULL) {
+			stack_push(&s, temp->right);
+		}
+		if (temp->left != NULL) {
+			stack_push(&s, temp->left);
+		}
+	}
+	return i;
+}
+
+int bfs(TreeNode* root, void* key) {
+	int i = 0;
+	Queue q;
+	queue_init(&q);
+	queue_push(&q, root);
+
+	while (q.data != NULL)
+	{
+		TreeNode* temp = (TreeNode*)queue_pop(&q); 
+		i++; 
+
+		if (temp->data == key) { 
+			return i; 
+		}
+		if (temp->left != NULL) { 
+			queue_push(&q, temp->left); 
+		}
+		if (temp->right != NULL) {
+			queue_push(&q, temp->right); 
+		}
+	}
+
+	return i;
 }
