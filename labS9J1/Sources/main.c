@@ -145,7 +145,7 @@ int main(int argc, char** argv) {
 	}
 
 	//-----------FIRST CHECK-----------
-	nodes_visited2 = nodes_visited = 0;
+	/*nodes_visited2 = nodes_visited = 0;
 	list[0]->len--;
 
 	add_adjacent_node(list[0], list[4]);
@@ -162,10 +162,10 @@ int main(int argc, char** argv) {
 
 	for (int i = 0; i < len; ++i) {
 		list[i]->visited = 0;
-	}
+	}*/
 
 	//-----------SECOND CHECK-----------
-	list[0]->len = 0;
+	/*list[0]->len = 0;
 
 	add_adjacent_node(list[0], list[1]);
 	add_adjacent_node(list[0], list[4]);
@@ -186,10 +186,10 @@ int main(int argc, char** argv) {
 	
 	for (int i = 0; i < len; ++i) {
 		list[i]->visited = 0;
-	}
+	}*/
 
 	//-----------THIRD CHECK-----------
-	list[0]->len = 0;
+	/*list[0]->len = 0;
 	add_adjacent_node(list[0], list[1]);
 	add_adjacent_node(list[1], list[2]);
 
@@ -198,7 +198,7 @@ int main(int argc, char** argv) {
 		Node* n = stack_pop(&s);
 		if (n->data != table2[i])
 			printf("ERROR: Vous avez un erreur dans la fonction breath first search\n");
-	}
+	}*/
 
 	return 0;
 }

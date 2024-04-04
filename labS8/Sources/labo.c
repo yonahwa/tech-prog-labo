@@ -1,4 +1,4 @@
-#include "labo.h"
+ #include "labo.h"
 
 static long long tab[0x7ffffff] = { 0 };
 

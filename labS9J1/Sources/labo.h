@@ -45,7 +45,7 @@ struct Node
 	Node* adj[UINT8_MAX];
 	uint8_t len;
 	uint8_t visited;
-	QNode revPath;
+	QNode* revPath;
 };
 
 
