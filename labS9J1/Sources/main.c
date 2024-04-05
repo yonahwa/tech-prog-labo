@@ -80,7 +80,7 @@ int main(int argc, char** argv) {
 	list[len++] = create_node("E");
 	list[len++] = create_node("F");
 
-	add_adjacent_node(list[0], list[4]);
+	add_adjacent_node(list[0], list[4]); // A lier à 
 	add_adjacent_node(list[0], list[1]);
 	add_adjacent_node(list[1], list[0]);
 	add_adjacent_node(list[1], list[2]);
